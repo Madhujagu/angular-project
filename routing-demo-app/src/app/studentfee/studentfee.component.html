@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple HTML HomePage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+</style>
+</head>
+<body>
+    <header class="header">
+      <a href="#" class="logo">Developer</a>
+      <nav class="nav-items">
+        <a href="/home">Home</a>
+        <a href="/marks">StudentMarks</a>
+        <a href="/fee">StudentFee</a>
+        <a href="/contactus">Contact</a>
+      </nav>
+    </header>
+    
+        <main>
+            <label>Fee:</label>
+            <div class="inputTwo">
+                <input type="text" [(ngModel)]="searchFee"/>
+                <button (click)="postFee()">Fee Data</button>
+            </div>
+            
+            <div class="container">
+        <div class="con">
+      <h2>StudentDatabase:</h2>          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>STUDENT_ID</th>
+            <th>STUDENT_NAME</th>
+            <th>STUDENT_MARKS</th>
+            <th>STUDENT_FEE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let eachuser of userData">
+            <td>{{eachuser.id}}</td>
+            <td>{{eachuser.name}}</td>
+            <td>{{eachuser.marks}}</td>
+            <td>{{eachuser.fee}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+            </div>
+    </main>
+    
+    <footer class="footer">
+      <div class="copy">&copy; 2022 Developer</div>
+      <div class="bottom-links">
+        <div class="links">
+          <span>More Info</span>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="links">
+          <span>Social Links</span>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  
+  </html>
+

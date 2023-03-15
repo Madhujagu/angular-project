@@ -1,0 +1,17 @@
+<div>
+   <h3>{{errorMessage}}</h3>
+</div>
+
+<div class="login">
+    
+    <h2>Log-In</h2>
+    <br><br>
+
+    UserName:<input type="text" [(ngModel)]="userName"/>
+    <br><br>
+    
+    Password:<input type="text" [(ngModel)]="userPassword"/>
+    <br><br>
+    
+    <button (click)="submit()">Submit</button>
+</div>
